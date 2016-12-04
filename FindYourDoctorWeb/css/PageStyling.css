@@ -8,13 +8,17 @@ label::after {
 	content: ":";
 }
 
-.inputDiv {
-	float: left;
-	width: 50%;
-	border: black 2px;
+*{
+	box-sizing: border-box;
 }
 
-.clearRight {
-	clear: right;
+.inputDiv {
+	float: left;
+	min-width: 25%;
+	padding: 1em;
+}
+
+.clearLeft {
+	clear: left;
 }
 

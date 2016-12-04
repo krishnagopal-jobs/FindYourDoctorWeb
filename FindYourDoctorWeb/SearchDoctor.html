@@ -8,27 +8,30 @@
 </head>
 <body>
 	<form action="#" name="inputForm">
-		<div class="inputDiv">
+		<div class="inputDiv clearLeft">
 			<label id="zipCodeLabel">Zip Code</label> <input type="text" name="zipCode" id="zipCode"
 				autofocus="autofocus" pattern="\d{5}">
 		</div>
-		<div class="inputDiv clearRight">
+		<div class="inputDiv" >
 			<label id="specialityLabel">Speciality</label> 
 			<select name="specialityId" id="specialityId">
 				<option >--Select--</option>
 			</select>
 		</div>
-		<div class="inputDiv">
+		<div class="inputDiv clearLeft">
 			<label id="firstNameLabel">First Name</label> <input type="text" name="firstName" id="firstName"
 				autofocus="autofocus" pattern="\d{5}" placeholder="Enter First Name">
 		</div>
-		<div class="inputDiv clearRight">
+		<div class="inputDiv">
 			<label id="specialityLabel">Last Name</label> 
 			<input type="text" name="firstName" id="firstName"
 				autofocus="autofocus" pattern="\d{5}" placeholder="Enter First Name">
 		</div>
-		<div class="inputDiv clearRight">
+		<div class="inputDiv clearLeft">
 			<input type="button" value="Submit" onclick="javascript:getPhysicianDetails(document.inputForm);"/>
+		</div>
+		
+		<div class="clear:both">
 		</div>
 		
 	</form>

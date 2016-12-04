@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Select Your Doctor</title>
+<link href="css/PageStyling.css" rel="stylesheet" />
+<script type="text/javascript" src="js/selectYourDoctor.js"></script>
+</head>
+<body>
+	<form action="#" name="inputForm">
+		<div class="inputDiv">
+			<label id="zipCodeLabel">Zip Code</label> <input type="text" name="zipCode" id="zipCode"
+				autofocus="autofocus" pattern="\d{5}">
+		</div>
+		<div class="inputDiv clearRight">
+			<label id="specialityLabel">Speciality</label> 
+			<select name="specialityId" id="specialityId">
+				<option >--Select--</option>
+			</select>
+		</div>
+		<div class="inputDiv">
+			<label id="firstNameLabel">First Name</label> <input type="text" name="firstName" id="firstName"
+				autofocus="autofocus" pattern="\d{5}" placeholder="Enter First Name">
+		</div>
+		<div class="inputDiv clearRight">
+			<label id="specialityLabel">Last Name</label> 
+			<input type="text" name="firstName" id="firstName"
+				autofocus="autofocus" pattern="\d{5}" placeholder="Enter First Name">
+		</div>
+		<div class="inputDiv clearRight">
+			<input type="button" value="Submit" onclick="javascript:getPhysicianDetails(document.inputForm);"/>
+		</div>
+		
+	</form>
+	<div name="PhysiciansDiv" class="PhysiciansDiv">
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+label {
+	color: blue;
+}
+
+label::after {
+	content: ":";
+}
+
+.inputDiv {
+	float: left;
+	width: 50%;
+	border: black 2px;
+}
+
+.clearRight {
+	clear: right;
+}
+

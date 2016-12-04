@@ -6,7 +6,7 @@
 <link href="css/PageStyling.css" rel="stylesheet" />
 <script type="text/javascript" src="js/selectYourDoctor.js"></script>
 </head>
-<body>
+<body onload="javascript:populateSpecialities(document.getElementById('specialityId'));">
 	<form action="#" name="inputForm">
 		<div class="inputDiv clearLeft">
 			<label id="zipCodeLabel">Zip Code</label> <input type="text" name="zipCode" id="zipCode"
@@ -25,7 +25,7 @@
 		<div class="inputDiv">
 			<label id="specialityLabel">Last Name</label> 
 			<input type="text" name="firstName" id="firstName"
-				autofocus="autofocus" pattern="\d{5}" placeholder="Enter First Name">
+				autofocus="autofocus" pattern="\d{5}" placeholder="Enter Last Name">
 		</div>
 		<div class="inputDiv clearLeft">
 			<input type="button" value="Submit" onclick="javascript:getPhysicianDetails(document.inputForm);"/>

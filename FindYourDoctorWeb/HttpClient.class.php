@@ -39,6 +39,8 @@ class HttpClient {
 	// Tracker variables
 	var $redirect_count = 0;
 	var $cookie_host = '';
+	var $contentType = '';
+	
 	function HttpClient($host, $port=80) {
 		$this->host = $host;
 		$this->port = $port;
@@ -223,7 +225,13 @@ class HttpClient {
 		}
 		// If this is a POST, set the content type and length
 		if ($this->postdata) {
-			$headers[] = 'Content-Type: application/x-www-form-urlencoded';
+// 			if ($this->contentType) {
+// 				$headers[] = 'Content-Type:'.($this->contentType);
+// 			} else {
+				$headers[] = 'Content-Type: application/json';
+// 				$headers[] = 'Content-Type: application/x-www-form-urlencoded';
+// 			}
+
 			$headers[] = 'Content-Length: '.strlen($this->postdata);
 		}
 		$request = implode("\r\n", $headers)."\r\n\r\n".$this->postdata;
@@ -270,6 +278,9 @@ class HttpClient {
 	}
 	function setCookies($array) {
 		$this->cookies = $array;
+	}
+	function setContentType($contentType){
+		$this->contentType = $contentType;
 	}
 	// Option setting methods
 	function useGzip($boolean) {

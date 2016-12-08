@@ -1,15 +1,17 @@
 @CHARSET "UTF-8";
 
+* {
+	box-sizing: border-box;
+}
+
 label {
 	color: blue;
+	vertical-align: top;
 }
 
 label::after {
 	content: ":";
-}
-
-*{
-	box-sizing: border-box;
+	vertical-align: top;
 }
 
 .inputDiv {
@@ -21,4 +23,3 @@ label::after {
 .clearLeft {
 	clear: left;
 }
-

@@ -11,6 +11,7 @@ function populateSpecialities(specialitysSelect) {
 
 		}
 	};
-	xhttp.open("GET", "FindSpecialites.php", true);
+	//xhttp.open("GET", "FindSpecialites.php", true);
+	xhttp.open("GET", "http://localhost:8080/findYourDoctor/specialities/", true);
 	xhttp.send();
 }

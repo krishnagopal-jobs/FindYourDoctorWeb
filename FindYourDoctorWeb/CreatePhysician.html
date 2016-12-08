@@ -15,7 +15,7 @@
 </head>
 <body
 	onload="javascript:populateSpecialities(document.getElementById('specialityId'));">
-	<form action="#" name="inputForm" id="inputForm">
+	<form action="javascript:createPhysician(document.getElementById('inputForm'));" name="inputForm" id="inputForm">
 		<div class="inputDiv clearLeft">
 			<label id="firstNameLabel">First Name</label> <input type="text"
 				name="firstName" id="firstName" autofocus="autofocus"
@@ -24,7 +24,7 @@
 		<div class="inputDiv">
 			<label id="Middle Initial">Middle Initial</label> <input type="text"
 				name="middleInitial" id="middleInitial" autofocus="autofocus"
-				size="" placeholder="Enter Last Name" size="2" maxlength="2" />
+				size="" placeholder="Enter Middle Initial" size="2" maxlength="2" />
 		</div>
 		<div class="inputDiv">
 			<label id="lastNameLabel">Last Name</label> <input type="text"
@@ -32,12 +32,12 @@
 				placeholder="Enter Last Name" maxlength="45" required="required" />
 		</div>
 
-		<!-- 		<div class="inputDiv clearLeft" > -->
-		<!-- 			<label id="specialityLabel">Speciality</label>  -->
-		<!-- 			<select name="specialityId" id="specialityId"> -->
-		<!-- 				<option >--Select--</option> -->
-		<!-- 			</select> -->
-		<!-- 		</div> -->
+		<div class="inputDiv clearLeft">
+			<label id="specialityLabel">Speciality</label>
+			<select name="specialityId" id="specialityId" multiple="multiple" size="5">
+				<option>--Select--</option>
+			</select>
+		</div>
 
 		<div class="inputDiv clearLeft">
 			<label>Street</label> <input type="text" name="street" id="street"
@@ -68,8 +68,14 @@
 		</div>
 
 		<div class="inputDiv clearLeft">
-			<input type="button" value="Submit"
-				onclick="javascript:createPhysician(document.getElementById('inputForm'));" />
+			<label>Phone Number</label> <input type="text" name="phoneNumber"
+				id="phoneNumber" autofocus="autofocus" pattern="\d{10}"
+				maxlength="10" size="10" placeholder="Phone Number"
+				required="required" />
+		</div>
+
+		<div class="inputDiv clearLeft">
+			<input type="submit" value="Submit" />
 		</div>
 
 

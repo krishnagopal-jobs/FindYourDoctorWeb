@@ -33,8 +33,8 @@ function createPhysician(inputForm) {
 
 	console.log(JSON.stringify(data));
 
-	//xhttp.open("POST", "CreatePhysician.php", true);
-	xhttp.open("POST", "http://localhost:8080/findYourDoctor/physicians/", true);
+	xhttp.open("POST", "CreatePhysician.php", true);
+	//xhttp.open("POST", "http://localhost:8080/findYourDoctor/physicians/", true);
 	xhttp.setRequestHeader("Content-Type", "application/json");
 	xhttp.send(JSON.stringify(data));
 }

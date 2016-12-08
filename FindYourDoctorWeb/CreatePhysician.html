@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Select Your Doctor</title>
+<link href="css/PageStyling.css" rel="stylesheet" />
+
+<script type="text/javascript" src="js/createYourDoctor.js">
+	
+</script>
+<script type="text/javascript" src="js/selectYourDoctor.js">
+	
+</script>
+
+</head>
+<body
+	onload="javascript:populateSpecialities(document.getElementById('specialityId'));">
+	<form action="#" name="inputForm" id="inputForm">
+		<div class="inputDiv clearLeft">
+			<label id="firstNameLabel">First Name</label> <input type="text"
+				name="firstName" id="firstName" autofocus="autofocus"
+				placeholder="Enter First Name" maxlength="45" required="required" />
+		</div>
+		<div class="inputDiv">
+			<label id="Middle Initial">Middle Initial</label> <input type="text"
+				name="middleInitial" id="middleInitial" autofocus="autofocus"
+				size="" placeholder="Enter Last Name" size="2" maxlength="2" />
+		</div>
+		<div class="inputDiv">
+			<label id="lastNameLabel">Last Name</label> <input type="text"
+				name="lastName" id="lastName" autofocus="autofocus" size=""
+				placeholder="Enter Last Name" maxlength="45" required="required" />
+		</div>
+
+		<!-- 		<div class="inputDiv clearLeft" > -->
+		<!-- 			<label id="specialityLabel">Speciality</label>  -->
+		<!-- 			<select name="specialityId" id="specialityId"> -->
+		<!-- 				<option >--Select--</option> -->
+		<!-- 			</select> -->
+		<!-- 		</div> -->
+
+		<div class="inputDiv clearLeft">
+			<label>Street</label> <input type="text" name="street" id="street"
+				autofocus="autofocus" maxlength="100" required="required" />
+		</div>
+
+		<div class="inputDiv ">
+			<label>Suite</label> <input type="text" name="suiteNumber"
+				id="suiteNumber" autofocus="autofocus" maxlength="45"
+				placeholder="Enter Suite" />
+		</div>
+
+		<div class="inputDiv clearLeft">
+			<label>City</label> <input type="text" name="city" id="city"
+				autofocus="autofocus" maxlength="45" placeholder="Enter City"
+				required="required" />
+		</div>
+
+		<div class="inputDiv">
+			<label>State</label> <input type="text" name="state" id="state"
+				autofocus="autofocus" maxlength="2" size="2" required="required" />
+		</div>
+
+		<div class="inputDiv">
+			<label id="zipCodeLabel">Zip Code</label> <input type="text"
+				name="zipCode" id="zipCode" autofocus="autofocus" pattern="\d{5}"
+				maxlength="5" size="5" placeholder="Zipcode" required="required" />
+		</div>
+
+		<div class="inputDiv clearLeft">
+			<input type="button" value="Submit"
+				onclick="javascript:createPhysician(document.getElementById('inputForm'));" />
+		</div>
+
+
+		<div class="clear:both"></div>
+
+	</form>
+
+</body>
+</html>

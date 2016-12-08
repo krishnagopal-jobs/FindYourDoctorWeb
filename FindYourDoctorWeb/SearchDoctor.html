@@ -4,10 +4,14 @@
 <meta charset="UTF-8">
 <title>Select Your Doctor</title>
 <link href="css/PageStyling.css" rel="stylesheet" />
+
+<script type="text/javascript" src="node_modules/jquery/dist/core.js"></script>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="js/selectYourDoctor.js"></script>
+
 </head>
 <body onload="javascript:populateSpecialities(document.getElementById('specialityId'));">
-	<form action="#" name="inputForm">
+	<form action="#" name="inputForm" id="inputForm">
 		<div class="inputDiv clearLeft">
 			<label id="zipCodeLabel">Zip Code</label> <input type="text" name="zipCode" id="zipCode"
 				autofocus="autofocus" pattern="\d{5}">
@@ -24,11 +28,11 @@
 		</div>
 		<div class="inputDiv">
 			<label id="specialityLabel">Last Name</label> 
-			<input type="text" name="firstName" id="firstName"
+			<input type="text" name="lastName" id="lastName"
 				autofocus="autofocus" pattern="\d{5}" placeholder="Enter Last Name">
 		</div>
 		<div class="inputDiv clearLeft">
-			<input type="button" value="Submit" onclick="javascript:getPhysicianDetails(document.inputForm);"/>
+			<input type="button" value="Submit" onclick="javascript:getPhysicianDetails(document.getElementById('inputForm'));"/>
 		</div>
 		
 		<div class="clear:both">

@@ -28,6 +28,7 @@ function createPhysician(inputForm) {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
+			inputForm.innerHTML = "<H1>A physician has been added.</H1>";
 		}
 	};
 

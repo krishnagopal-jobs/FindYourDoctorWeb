@@ -14,42 +14,56 @@
 
 			}
 		};
-		xhttp.open("GET", "FindSpecialites.php", true);
-		//xhttp.open("GET", "http://localhost:8080/findYourDoctor/specialities/",
-				true);
+		//xhttp.open("GET", "FindSpecialites.php", true);
+		xhttp.open("GET", "http://localhost:8080/findYourDoctor/specialities/",true);
 		xhttp.send();
 	}
 
-	var doctorList = {};
 
 	var getPhysicianDetails = function(form) {
 
-		var url = "CreatePhysician.php?";
-		//var url = "http://localhost:8080/findYourDoctor/physicians";
+		//var url = "CreatePhysician.php?";
+		var url = "http://localhost:8080/findYourDoctor/physicians?";
 
 		if ($("#firstName").val().length != 0) {
-			url += ";firstName=" + $("#firstName").val();
+			url += "&firstName=" + $("#firstName").val();
 		}
 		if ($("#lastName").val().length != 0) {
-			url += ";lastName=" + $("#lastName").val();
+			url += "&lastName=" + $("#lastName").val();
 		}
 		if ($("#zipCode").val().length != 0) {
-			url += ";zipCode=" + $("#zipCode").val();
+			url += "&zipCode=" + $("#zipCode").val();
 		}
 		if ($("#specialityId").val().length != 0
 				&& $("#specialityId").val() != 0) {
-			url += ";specialityId=" + $("#specialityId").val();
+			url += "&specialityId=" + $("#specialityId").val();
 		}
 		$.ajax({
 			url : url,
 			contentType : "application/json",
 			success : function(result) {
-				debugger;
-				doctorList = result.data;
+			    $("#PhysiciansDiv").jsGrid({
+			        width: "100%",
+			        height: "400px",
+			 
+			        inserting: true,
+			        editing: true,
+			        sorting: true,
+			        paging: true,
+			 
+			        data: result.data,
+			 
+			        fields: [
+			            { name: "firstName", type: "text", width: 150, validate: "required" },
+			            { name: "lastName", type: "text", width: 150, validate: "required" },
+			            { name: "location.city", title:"City", type: "text", width: 150, validate: "required" },
+			            { name: "location.zipCode", title:"Zip Code", type: "text", width: 200 },
+			            { name: "specialities.0.specialityName", title: "Speciality", type: "text", width: 200 }
+			        ]
+			    });
 			},
 			failure : function(result) {
 				debugger;
-
 			}
 		});
 	}

@@ -4,12 +4,12 @@
 	box-sizing: border-box;
 }
 
-label {
+label, .label {
 	color: blue;
 	vertical-align: top;
 }
 
-label::after {
+label::after, .label::after {
 	content: ":";
 	vertical-align: top;
 }
@@ -22,4 +22,9 @@ label::after {
 
 .clearLeft {
 	clear: left;
+}
+
+.gridDiv {
+	float: left;
+	width: 100%;
 }

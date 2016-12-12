@@ -5,57 +5,56 @@
 <title>Select Your Doctor</title>
 <link href="css/PageStyling.css" rel="stylesheet" />
 
+<link rel="stylesheet" href="kendo/styles/kendo.common.min.css" />
+<link rel="stylesheet" href="kendo/styles/kendo.default.min.css" />
+<link rel="stylesheet" href="kendo/styles/kendo.default.mobile.min.css" />
 
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.2/jsgrid.min.css" />
-<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.2/jsgrid-theme.min.css" />
- 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.2/jsgrid.min.js"></script>
+<script src="kendo/js/kendo.all.min.js"></script>
 
-<link type="text/css" rel="stylesheet" href="css/jsgrid/jsgrid.min.css" />
-<link type="text/css" rel="stylesheet" href="css/jsgrid/jsgrid-theme.min.css" />
-    
-<script type="text/javascript" src="js/jsgrid/jsgrid.min.js"></script>
 <script type="text/javascript" src="js/selectYourDoctor.js"></script>
 
 
 </head>
-<body onload="javascript:populateSpecialities(document.getElementById('specialityId'));">
-	<form action="javascript:getPhysicianDetails(document.getElementById('inputForm'));" name="inputForm" id="inputForm">
+<body
+	onload="javascript:populateSpecialities(document.getElementById('specialityId'));">
+	<form
+		action="javascript:getPhysicianDetails(document.getElementById('inputForm'));"
+		name="inputForm" id="inputForm">
 		<div class="inputDiv clearLeft">
-			<label id="zipCodeLabel">Zip Code</label> <input type="text" name="zipCode" id="zipCode"
-				autofocus="autofocus" pattern="\d{5}" maxlength="5" size="5">
+			<label id="zipCodeLabel">Zip Code</label> <input type="text"
+				name="zipCode" id="zipCode" autofocus="autofocus" pattern="\d{5}"
+				maxlength="5" size="5">
 		</div>
-		<div class="inputDiv" >
-			<label id="specialityLabel">Speciality</label> 
-			<select name="specialityId" id="specialityId">
+		<div class="inputDiv">
+			<label id="specialityLabel">Speciality</label> <select
+				name="specialityId" id="specialityId">
 				<option value="0">--Select--</option>
 			</select>
 		</div>
-		<div class="inputDiv" >
-			<label id="cityLabel">City</label> 
-			<input type="text" name="city" id="city"
-				autofocus="autofocus" maxlength="45" />
+		<div class="inputDiv">
+			<label id="cityLabel">City</label> <input type="text" name="city"
+				id="city" autofocus="autofocus" maxlength="45" />
 		</div>
 		<div class="inputDiv clearLeft">
-			<label id="firstNameLabel">First Name</label> <input type="text" name="firstName" id="firstName"
-				autofocus="autofocus" placeholder="Enter First Name" maxlength="45" />
+			<label id="firstNameLabel">First Name</label> <input type="text"
+				name="firstName" id="firstName" autofocus="autofocus"
+				placeholder="Enter First Name" maxlength="45" />
 		</div>
 		<div class="inputDiv">
-			<label id="specialityLabel">Last Name</label> 
-			<input type="text" name="lastName" id="lastName"
-				autofocus="autofocus" placeholder="Enter Last Name"  maxlength="45" />
+			<label id="specialityLabel">Last Name</label> <input type="text"
+				name="lastName" id="lastName" autofocus="autofocus"
+				placeholder="Enter Last Name" maxlength="45" />
 		</div>
 		<div class="inputDiv clearLeft">
 			<input type="submit" value="Submit" />
 		</div>
-		
+
 	</form>
 	<div class="clearBoth" style="clear: both;"></div>
-	
-	<div id="PhysiciansDiv">
-	</div>
+
+	<div id="PhysiciansDiv"></div>
 </body>
 </html>

@@ -16,7 +16,10 @@
 
 
 </head>
-<body>
+<body id="mainBody">
+    <div style="float: right">
+        <a href="javascript:deletePhysician();">Delete Physician</a>
+    </div>
 	<div id="DoctorBasicDetails">
 		<div class="inputDiv clearLeft">
 			<label id="nameLabel">Name</label>
@@ -55,7 +58,8 @@
 		<div class="label">Patient reviews</div>
 		<div id="patientReviews"></div>
 	</div>
-
+    
+    <input type="hidden" id="physicianId" name="physicianId" />
 
 </body>
 </html>

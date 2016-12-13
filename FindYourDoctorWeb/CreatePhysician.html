@@ -15,63 +15,92 @@
 </head>
 <body
 	onload="javascript:populateSpecialities(document.getElementById('specialityId'));">
-	<form action="javascript:createPhysician(document.getElementById('inputForm'));" name="inputForm" id="inputForm">
+	<form
+		action="javascript:createPhysician(document.getElementById('inputForm'));"
+		name="inputForm" id="inputForm">
 		<div class="inputDiv clearLeft">
-			<label id="firstNameLabel">First Name</label> <input type="text"
-				name="firstName" id="firstName" autofocus="autofocus"
-				placeholder="Enter First Name" maxlength="45" required="required" />
+			<div class="label" id="firstNameLabel">First Name</div>
+			<div class="input">
+				<input type="text" name="firstName" id="firstName"
+					autofocus="autofocus" placeholder="Enter First Name" maxlength="45"
+					required="required" />
+			</div>
 		</div>
 		<div class="inputDiv">
-			<label id="Middle Initial">Middle Initial</label> <input type="text"
-				name="middleInitial" id="middleInitial" autofocus="autofocus"
-				size="" placeholder="Enter Middle Initial" size="2" maxlength="2" />
+			<div class="label" id="Middle Initial">Middle Initial</div>
+			<div class="input">
+				<input type="text" name="middleInitial" id="middleInitial"
+					autofocus="autofocus" size="" placeholder="Enter Middle Initial"
+					size="2" maxlength="2" />
+			</div>
 		</div>
 		<div class="inputDiv">
-			<label id="lastNameLabel">Last Name</label> <input type="text"
-				name="lastName" id="lastName" autofocus="autofocus" size=""
-				placeholder="Enter Last Name" maxlength="45" required="required" />
+			<div class="label" id="lastNameLabel">Last Name</div>
+			<div class="input">
+				<input type="text" name="lastName" id="lastName"
+					autofocus="autofocus" size="" placeholder="Enter Last Name"
+					maxlength="45" required="required" />
+			</div>
 		</div>
 
 		<div class="inputDiv clearLeft">
-			<label id="specialityLabel">Speciality</label>
-			<select name="specialityId" id="specialityId" multiple="multiple" size="5">
-				<option>--Select--</option>
-			</select>
+			<div class="label" id="specialityLabel">Speciality</div>
+			<div class="input">
+				<select name="specialityId" id="specialityId" multiple="multiple"
+					size="5">
+					<option>--Select--</option>
+				</select>
+			</div>
 		</div>
 
 		<div class="inputDiv clearLeft">
-			<label>Street</label> <input type="text" name="street" id="street"
-				autofocus="autofocus" maxlength="100" required="required" />
+			<div class="label">Street</div>
+			<div class="input">
+				<input type="text" name="street" id="street" autofocus="autofocus"
+					maxlength="100" required="required" />
+			</div>
 		</div>
 
 		<div class="inputDiv ">
-			<label>Suite</label> <input type="text" name="suiteNumber"
-				id="suiteNumber" autofocus="autofocus" maxlength="45"
-				placeholder="Enter Suite" />
+			<div class="label">Suite</div>
+			<div class="input">
+				<input type="text" name="suiteNumber" id="suiteNumber"
+					autofocus="autofocus" maxlength="45" placeholder="Enter Suite" />
+			</div>
 		</div>
 
 		<div class="inputDiv clearLeft">
-			<label>City</label> <input type="text" name="city" id="city"
-				autofocus="autofocus" maxlength="45" placeholder="Enter City"
-				required="required" />
+			<div class="label">City</div>
+			<div class="input">
+				<input type="text" name="city" id="city" autofocus="autofocus"
+					maxlength="45" placeholder="Enter City" required="required" />
+			</div>
 		</div>
 
 		<div class="inputDiv">
-			<label>State</label> <input type="text" name="state" id="state"
-				autofocus="autofocus" maxlength="2" size="2" required="required" />
+			<div class="label">State</div>
+			<div class="input">
+				<input type="text" name="state" id="state" autofocus="autofocus"
+					maxlength="2" size="2" required="required" />
+			</div>
 		</div>
 
 		<div class="inputDiv">
-			<label id="zipCodeLabel">Zip Code</label> <input type="text"
-				name="zipCode" id="zipCode" autofocus="autofocus" pattern="\d{5}"
-				maxlength="5" size="5" placeholder="Zipcode" required="required" />
+			<div class="label" id="zipCodeLabel">Zip Code</div>
+			<div class="input">
+				<input type="text" name="zipCode" id="zipCode" autofocus="autofocus"
+					pattern="\d{5}" maxlength="5" size="5" placeholder="Zipcode"
+					required="required" />
+			</div>
 		</div>
 
 		<div class="inputDiv clearLeft">
-			<label>Phone Number</label> <input type="text" name="phoneNumber"
-				id="phoneNumber" autofocus="autofocus" pattern="\d{10}"
-				maxlength="10" size="10" placeholder="Phone Number"
-				required="required" />
+			<div class="label">Phone Number</div>
+			<div class="input">
+				<input type="text" name="phoneNumber" id="phoneNumber"
+					autofocus="autofocus" pattern="\d{10}" maxlength="10" size="10"
+					placeholder="Phone Number" required="required" />
+			</div>
 		</div>
 
 		<div class="inputDiv clearLeft">
@@ -82,7 +111,7 @@
 		<div class="clear:both"></div>
 
 	</form>
-	
+
 	<div id="DoctorsDetails"></div>
 
 </body>

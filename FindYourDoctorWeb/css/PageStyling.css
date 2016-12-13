@@ -5,8 +5,14 @@
 }
 
 label, .label {
-	color: blue;
-	vertical-align: top;
+    color: blue;
+    vertical-align: top;
+    float: left;
+    width: 120px;
+}
+
+.input {
+    float: left;
 }
 
 label::after, .label::after {

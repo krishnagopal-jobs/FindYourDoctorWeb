@@ -4,11 +4,16 @@
 	box-sizing: border-box;
 }
 
-label, .label {
+label{
     color: blue;
     vertical-align: top;
     float: left;
     width: 120px;
+}
+
+.label {
+    color: blue;
+    vertical-align: top;
 }
 
 .input {
@@ -21,9 +26,9 @@ label::after, .label::after {
 }
 
 .inputDiv {
-	float: left;
-	min-width: 25%;
-	padding: 1em;
+float: left;
+    min-width: 25%;
+    padding: 1em 1em 1em 0;
 }
 
 .clearLeft {

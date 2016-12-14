@@ -14,30 +14,45 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="kendo/js/kendo.all.min.js"></script>
 
+<script>
+var urlParams;
+(window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+</script>
+
 
 </head>
-<body id="mainBody">
+<body id="mainBody" onload="javascript:populateDoctorDetails(); ">
     <div style="float: right">
         <a href="javascript:deletePhysician();">Delete Physician</a>
     </div>
 	<div id="DoctorBasicDetails">
 		<div class="inputDiv clearLeft">
-			<label id="nameLabel">Name</label>
+			<div class="label" id="nameLabel">Name</div>
 			<div class="staticData" id="name"></div>
 		</div>
 
 		<div class="inputDiv clearLeft">
-			<label id="specialityLabel">Specialities</label>
+			<div class="label" id="specialityLabel">Specialities</div>
 			<div class="staticData" id="specialities"></div>
 		</div>
 
 		<div class="inputDiv clearLeft">
-			<label id="addressLabel">Address</label>
+			<div class="label" id="addressLabel">Address</div>
 			<div class="staticData" id="address"></div>
 		</div>
 
 		<div class="inputDiv clearLeft">
-			<label id="phoneNumberLabel">PhoneNumber</label>
+			<div class="label" id="phoneNumberLabel">PhoneNumber</div>
 			<div class="staticData" id="phoneNumber"></div>
 		</div>
 	</div>

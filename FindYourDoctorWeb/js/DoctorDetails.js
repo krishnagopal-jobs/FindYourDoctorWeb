@@ -1,6 +1,6 @@
 function populateDoctorDetails(physicianId) {
 
-    var url = "FindPhysicianDetails.php?physicianId=" + physicianId;
+    var url = "FindPhysicianDetails.php?physicianId=" + urlParams['physicianId'];
 
     $.ajax({
         url : url,

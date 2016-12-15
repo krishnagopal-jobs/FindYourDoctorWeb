@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Select Your Doctor</title>
+<link href="css/PageStyling.css" rel="stylesheet" />
+
+<script type="text/javascript" src="js/CustomerDetails.js">
+    
+</script>
+
+<link href="css/PageStyling.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="kendo/styles/kendo.common.min.css" />
+<link rel="stylesheet" href="kendo/styles/kendo.default.min.css" />
+<link rel="stylesheet" href="kendo/styles/kendo.default.mobile.min.css" />
+
+<script type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="kendo/js/kendo.all.min.js"></script>
+
+</head>
+<body
+    onload="javascript:populateSpecialities(document.getElementById('specialityId'));">
+    <form
+        action="javascript:createCustomer(document.getElementById('inputForm'));"
+        name="inputForm" id="inputForm">
+        <div class="inputDiv clearLeft">
+            <div class="label" id="name">Name</div>
+            <div class="input">
+                <input type="text" name="name" id="name"
+                    autofocus="autofocus" placeholder="Name" maxlength="45"
+                    required="required" />
+            </div>
+        </div>
+
+        <div class="inputDiv clearLeft">
+            <div class="label">Street</div>
+            <div class="input">
+                <input type="text" name="street" id="street" autofocus="autofocus"
+                    maxlength="100" required="required" />
+            </div>
+        </div>
+
+        <div class="inputDiv clearLeft">
+            <div class="label">City</div>
+            <div class="input">
+                <input type="text" name="city" id="city" autofocus="autofocus"
+                    maxlength="45" placeholder="Enter City" required="required" />
+            </div>
+        </div>
+
+        <div class="inputDiv clearLeft">
+            <input type="submit" value="Submit" />
+        </div>
+
+
+        <div class="clear:both"></div>
+
+    </form>
+
+    <div id="Customers"></div>
+
+</body>
+</html>

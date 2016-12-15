@@ -19,19 +19,8 @@ var populateSpecialities = function(specialitysSelect) {
 }
 
 var openDoctorDetails = function(physicianId) {
-    var time1 = new Date();
     var doctorDetailsPage = window.open('PhysicianDetails.html?physicianId='+physicianId, '_blank',
             'resizable=yes; width=1000; height=1500; top=50; left=50');
-//    var times = 0;
-//    while (!doctorDetailsPage.populateDoctorDetails) {
-//        setTimeout(function() {
-//            times++;
-//        }, 500);
-//    }
-//    doctorDetailsPage.populateDoctorDetails(physicianId);
-//    doctorDetailsPage.focus();
-//    console.log("Time taken for this openDoctorDetails:" + (new Date() - time1)
-//            + "  " + times);
 };
 
 var getPhysicianDetails = function(form) {

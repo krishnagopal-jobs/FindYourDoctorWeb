@@ -32,7 +32,7 @@ function populateDoctorDetails(physicianId) {
             $("#specialities").html(speciailitiesText);
 
             $("#phoneNumber").text(result.location.phoneNumber);
-
+            
             $("#educationalQualifications").kendoGrid({
                 dataSource : {
                     data : result.educationalQualifications,
@@ -69,6 +69,7 @@ function populateDoctorDetails(physicianId) {
                     title : "Insurance Name"
                 } ]
             });
+            
             $("#patientReviews").kendoGrid({
                 dataSource : {
                     data : result.patientReviews,
@@ -95,6 +96,7 @@ function populateDoctorDetails(physicianId) {
                     title : "Comments"
                 } ]
             });
+            
             $("#insuranceReviews").kendoGrid({
                 dataSource : {
                     data : result.insuranceReviews,
